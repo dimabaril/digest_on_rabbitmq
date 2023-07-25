@@ -93,7 +93,7 @@ pip install -r requirements.txt
 * Поднимаем в докере рабита
 
 ```zsh
-docker run -p 15672:15672 -p 5672:5672 rabbitmq 
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
 ```
 
 * Если хотите понаполнять базу то идём на <https://newsapi.org>, регистрируемся и где то здесь <https://newsapi.org/account> получаем API key (если вам лень регаться то я залил базу на гит ;)
