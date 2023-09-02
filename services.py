@@ -5,6 +5,7 @@ session = create_session()
 
 
 def generate_digest(user):
+    # здесь очень плохие запросы в ДБ вот тут сделано всё хорошо уже (https://github.com/dimabaril/flask-sqlalchemy-digest-app/blob/main/app.py), но для истории оставим )
     popular_posts = (
         session.query(Post)
         .join(Post.tags)
